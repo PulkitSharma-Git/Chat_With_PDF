@@ -1,0 +1,41 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b",
+    "start": "node ./dist/index.js && node ./dist/worker.js",
+    "dev": "npm run build && npm run start",
+    "dev:worker": "node ./dist/worker.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.43",
+    "@langchain/core": "^0.3.56",
+    "@langchain/openai": "^0.5.10",
+    "@langchain/qdrant": "^0.1.2",
+    "@langchain/textsplitters": "^0.1.0",
+    "bullmq": "^5.52.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "langchain": "^0.3.26",
+    "multer": "1.4.5-lts.2",
+    "pdf-parse": "^1.1.1",
+    "qdrant-client": "^0.0.1",
+    "sharp": "^0.32.6",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.15.18"
+  },
+  "pnpm": {
+  "onlyBuiltDependencies": ["sharp"]
+}
+}
